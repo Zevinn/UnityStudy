@@ -1,5 +1,10 @@
-Study/
-Project/TextRPGs/
+Library/
+Logs/
+obj/
+Packages/
+ProjectSettings/
+UserSettings/
+Assets/Resources/Art/UnityChan/
 
 # User-specific files
 *.rsuser
