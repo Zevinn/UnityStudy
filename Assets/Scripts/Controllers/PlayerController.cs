@@ -12,10 +12,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     float _speed = 7.0f; // moving speed
     
-    float _rot = 15.0f; // rotation speed
+    //float _rot = 15.0f; // rotation speed
 
     Vector3 _destPos;
 
+    void Start()
+    {
+        //Managers.Input.KeyAction -= OnKeyboard; // 备刀秒家, avoid duplicate
+        //Managers.Input.KeyAction += OnKeyboard; // 备刀脚没
+        Managers.Input.MouseAction -= OnMouseClicked;
+        Managers.Input.MouseAction += OnMouseClicked;
+
+        Managers.Resource.Instantiate("UI/UI_Button");
+    }
 
     //float Wait_Run_Ratio = 0; // to manipulate blend-tree of the animator
     public enum PlayerState
@@ -66,13 +75,7 @@ public class PlayerController : MonoBehaviour
                 anim.Play("WAIT_RUN");*/
         anim.SetFloat("speed", 0);
     }
-    void Start()
-    {
-        //Managers.Input.KeyAction -= OnKeyboard; // 备刀秒家, avoid duplicate
-        //Managers.Input.KeyAction += OnKeyboard; // 备刀脚没
-        Managers.Input.MouseAction -= OnMouseClicked;
-        Managers.Input.MouseAction += OnMouseClicked;
-    }
+
 
     void Update()
     {
