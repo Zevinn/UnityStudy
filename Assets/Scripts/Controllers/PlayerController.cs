@@ -22,8 +22,6 @@ public class PlayerController : MonoBehaviour
         //Managers.Input.KeyAction += OnKeyboard; // 구독신청
         Managers.Input.MouseAction -= OnMouseClicked;
         Managers.Input.MouseAction += OnMouseClicked;
-
-        Managers.Resource.Instantiate("UI/UI_Button");
     }
 
     //float Wait_Run_Ratio = 0; // to manipulate blend-tree of the animator
