@@ -10,6 +10,7 @@ public class InputManager
     public Action<Define.MouseEvent> MouseAction = null;
     
     bool _pressed = false;
+
     public void OnUpdate()
     {
         if (EventSystem.current.IsPointerOverGameObject()) // if UI clicked, return true;

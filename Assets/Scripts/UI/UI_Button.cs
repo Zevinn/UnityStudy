@@ -28,8 +28,8 @@ public class UI_Button : UI_Base
         ItemIcon,
     }
 
-    [SerializeField]
-    Text text;
+    [SerializeField] Text text;
+    
 
 
 
@@ -39,8 +39,6 @@ public class UI_Button : UI_Base
         Bind<Text>(typeof(Texts));
         Bind<GameObject>(typeof(GameObjects));
         Bind<Image>(typeof(Images));
-
-        
 
         GetButton((int)Buttons.PointButton).gameObject.AddUIEvent(OnButtonClicked);
 
